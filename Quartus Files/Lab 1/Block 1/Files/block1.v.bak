@@ -1,0 +1,37 @@
+module block1(
+    input    [7:0] SW,
+	input	 [1:0] KEY,
+	output	 [6:0] HEX0,
+	output	 [6:0] HEX1,
+    output	 [6:0] HEX2,
+    output	 [6:0] HEX3,
+    output	 [6:0] HEX4,
+    output	 [6:0] HEX5,
+    output   [9:0] LEDR
+);
+
+assign LEDR[9:8] = 0;
+assign LEDR[7:0] = ~SW;
+assign HEX5[3:0] = 3'b110;
+assign HEX4[6:0] = 7'b1011011;
+assign HEX3[6:0] = 7'b1011011;
+assign HEX2[3:0] = 3'b110;
+assign HEX1[6:0] = 7'b1101111;
+assign HEX0[6:0] = 7'b1101111;
+
+/*always @(KEY[0], KEY[1])
+    if(KEY[0] == 1)
+    begin
+    LEDR[7:0] <= SW;
+    end
+    if(KEY[1] == 1)
+    begin
+    HEX5[6:0] <= 7'b0111111;
+    HEX4[6:0] <= 7'b1100111;
+    HEX3[6:0] <= 7'b0111111;
+    HEX2[6:0] <= 7'b0000111;
+    HEX1[6:0] <= 7'b1101111;
+    HEX0[6:0] <= 7'b1101111;
+    end
+*/
+endmodule

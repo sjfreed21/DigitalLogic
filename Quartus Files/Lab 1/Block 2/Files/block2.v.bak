@@ -1,0 +1,43 @@
+module block2(
+    input    [7:0] SW,
+	input	 [0] KEY,
+	output	 [7:0] HEX0,
+	output	 [7:0] HEX1,
+    output	 [7:0] HEX2,
+    output	 [7:0] HEX3,
+    output	 [7:0] HEX4,
+    output	 [7:0] HEX5,
+    output   [9:0] LEDR
+);
+
+wire [3:0] inputx;
+wire [3:0] inputy;
+wire negx;
+wire negy;
+
+assign LEDR[9:0] = 0;
+if SW[7] == 1:
+begin
+    assign inputx[3:0] = SW[7:4]
+    assign negx = 1'b1;
+end
+if SW[7] == 0:
+begin
+    assign inputx[3:0] = ~SW[7:4]
+    assign negx = 1'b0;
+end
+if SW[3] == 1:
+begin
+    assign inputy[3:0] = SW[3:0]
+    assign negy = 1'b1;
+end
+if SW[3] == 0:
+begin
+    assign inputy[3:0] = ~SW[3:0]
+    assign negy = 1'b0;
+end
+
+sevenseg U5 ( .data(inputx), .minus(negx), .blank(~negx), .HEX(HEX5));
+sevenseg U5 ( .data(inputx), .minus(negx), .blank(~negx), .HEX(HEX4));
+sevenseg U5 ( .data(inputy), .minus(negy), .blank(~negy), .HEX(HEX3));
+sevenseg U5 ( .data(inputy), .minus(negy), .blank(~negy), .HEX(HEX2));

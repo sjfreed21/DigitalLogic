@@ -1,0 +1,311 @@
+$date
+	Mon Oct 07 14:12:51 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module tb $end
+$var wire 10 ! LEDR [9:0] $end
+$var wire 8 " HEX5 [7:0] $end
+$var wire 8 # HEX4 [7:0] $end
+$var wire 8 $ HEX3 [7:0] $end
+$var wire 8 % HEX2 [7:0] $end
+$var wire 8 & HEX1 [7:0] $end
+$var wire 8 ' HEX0 [7:0] $end
+$var reg 2 ( KEY [1:0] $end
+$var reg 8 ) SW [7:0] $end
+$scope module DUT $end
+$var wire 2 * KEY [1:0] $end
+$var wire 8 + SW [7:0] $end
+$var wire 1 , over $end
+$var wire 4 - sum [3:0] $end
+$var wire 1 . negy $end
+$var wire 1 / negx $end
+$var wire 4 0 inputy [3:0] $end
+$var wire 4 1 inputx [3:0] $end
+$var wire 4 2 dispy [3:0] $end
+$var wire 4 3 dispx [3:0] $end
+$var wire 4 4 carry [3:0] $end
+$var wire 10 5 LEDR [9:0] $end
+$var wire 8 6 HEX5 [7:0] $end
+$var wire 8 7 HEX4 [7:0] $end
+$var wire 8 8 HEX3 [7:0] $end
+$var wire 8 9 HEX2 [7:0] $end
+$var wire 8 : HEX1 [7:0] $end
+$var wire 8 ; HEX0 [7:0] $end
+$var reg 1 < blank $end
+$var reg 1 = neg $end
+$var reg 4 > num [3:0] $end
+$scope module A1 $end
+$var wire 1 ? a $end
+$var wire 1 @ and1 $end
+$var wire 1 A and2 $end
+$var wire 1 B b $end
+$var wire 1 C cin $end
+$var wire 1 D cout $end
+$var wire 1 E mode $end
+$var wire 1 F or1 $end
+$var wire 1 G sum $end
+$var wire 1 H xor1 $end
+$upscope $end
+$scope module A2 $end
+$var wire 1 I a $end
+$var wire 1 J and1 $end
+$var wire 1 K and2 $end
+$var wire 1 L b $end
+$var wire 1 M cin $end
+$var wire 1 N cout $end
+$var wire 1 O mode $end
+$var wire 1 P or1 $end
+$var wire 1 Q sum $end
+$var wire 1 R xor1 $end
+$upscope $end
+$scope module A3 $end
+$var wire 1 S a $end
+$var wire 1 T and1 $end
+$var wire 1 U and2 $end
+$var wire 1 V b $end
+$var wire 1 W cin $end
+$var wire 1 X cout $end
+$var wire 1 Y mode $end
+$var wire 1 Z or1 $end
+$var wire 1 [ sum $end
+$var wire 1 \ xor1 $end
+$upscope $end
+$scope module A4 $end
+$var wire 1 ] a $end
+$var wire 1 ^ and1 $end
+$var wire 1 _ and2 $end
+$var wire 1 ` b $end
+$var wire 1 a cin $end
+$var wire 1 b cout $end
+$var wire 1 c mode $end
+$var wire 1 d or1 $end
+$var wire 1 e sum $end
+$var wire 1 f xor1 $end
+$upscope $end
+$scope module U0 $end
+$var wire 1 g blank $end
+$var wire 4 h data [3:0] $end
+$var wire 1 i minus $end
+$var reg 8 j HEX [7:0] $end
+$upscope $end
+$scope module U1 $end
+$var wire 1 < blank $end
+$var wire 4 k data [3:0] $end
+$var wire 1 = minus $end
+$var reg 8 l HEX [7:0] $end
+$upscope $end
+$scope module U2 $end
+$var wire 1 m blank $end
+$var wire 4 n data [3:0] $end
+$var wire 1 o minus $end
+$var reg 8 p HEX [7:0] $end
+$upscope $end
+$scope module U3 $end
+$var wire 1 q blank $end
+$var wire 4 r data [3:0] $end
+$var wire 1 . minus $end
+$var reg 8 s HEX [7:0] $end
+$upscope $end
+$scope module U4 $end
+$var wire 1 t blank $end
+$var wire 4 u data [3:0] $end
+$var wire 1 v minus $end
+$var reg 8 w HEX [7:0] $end
+$upscope $end
+$scope module U5 $end
+$var wire 1 x blank $end
+$var wire 4 y data [3:0] $end
+$var wire 1 / minus $end
+$var reg 8 z HEX [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11111111 z
+b110 y
+1x
+b10000010 w
+0v
+b110 u
+0t
+b11111111 s
+b1 r
+1q
+b11111001 p
+0o
+b1 n
+0m
+b11111111 l
+b0 k
+b10001110 j
+0i
+bx h
+0g
+xf
+xe
+xd
+xc
+xb
+xa
+0`
+x_
+0^
+0]
+x\
+x[
+1Z
+xY
+xX
+xW
+0V
+xU
+xT
+1S
+xR
+xQ
+1P
+xO
+xN
+xM
+0L
+xK
+xJ
+1I
+xH
+xG
+xF
+xE
+xD
+xC
+1B
+xA
+0@
+0?
+bx >
+x=
+x<
+b10001110 ;
+b11111111 :
+b11111001 9
+b11111111 8
+b10000010 7
+b11111111 6
+bz00000000 5
+bx 4
+b110 3
+b1 2
+b110 1
+b1 0
+0/
+0.
+bx -
+x,
+b1100001 +
+bx *
+b1100001 )
+bx (
+b10001110 '
+b11111111 &
+b11111001 %
+b11111111 $
+b10000010 #
+b11111111 "
+bz00000000 !
+$end
+#100
+b10100100 %
+b10100100 9
+b10100100 p
+0B
+1L
+b10 2
+b10 n
+b10 r
+b10 0
+b1100010 )
+b1100010 +
+#200
+b10000000 %
+b10000000 9
+b10000000 p
+0L
+1`
+b1000 2
+b1000 n
+b1000 r
+b10111111 $
+b10111111 8
+b10111111 s
+0q
+b1000 0
+1.
+b1101000 )
+b1101000 +
+#300
+b10010010 '
+b10010010 ;
+b10010010 j
+0,
+1b
+0Q
+0K
+1[
+1U
+0e
+1_
+0M
+1W
+1a
+0D
+b11111111 &
+b11111111 :
+b11111111 l
+1N
+b1110 4
+1X
+0A
+b101 >
+b101 h
+1<
+0=
+1J
+1T
+0F
+1d
+b101 -
+1G
+1R
+1\
+0H
+1f
+b11111001 %
+b11111001 9
+b11111001 p
+1E
+1C
+1O
+1Y
+1c
+1B
+0`
+b1 2
+b1 n
+b1 r
+b11111111 $
+b11111111 8
+b11111111 s
+1q
+b1 0
+0.
+bx0 (
+bx0 *
+b1100001 )
+b1100001 +
+#400

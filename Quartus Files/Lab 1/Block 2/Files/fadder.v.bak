@@ -1,0 +1,20 @@
+module fadder(
+    input a,
+    input b,
+    input cin,
+    output wire sum,
+    output cout
+);
+
+wire xor1;
+wire xor2;
+wire and1;
+wire and2;
+
+xor(xor1,a,b);
+xor(sum,xor1,cin);
+and(and1,a,b);
+and(and2,cin,xor1);
+or(cout,and1,and2);
+
+endmodule

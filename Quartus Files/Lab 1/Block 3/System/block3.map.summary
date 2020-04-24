@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Mon Oct 07 13:09:24 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : block3
+Top-level Entity Name : block3
+Family : MAX 10
+Total logic elements : 25
+    Total combinational functions : 25
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 70
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

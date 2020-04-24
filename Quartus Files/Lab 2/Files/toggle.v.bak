@@ -1,0 +1,13 @@
+module toggle(
+    input key;
+    output value;
+)
+
+reg value = 0;
+
+always @(posedge key)
+begin
+    value = ~value;
+end
+
+endmodule

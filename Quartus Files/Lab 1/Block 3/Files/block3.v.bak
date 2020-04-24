@@ -1,0 +1,52 @@
+module block3(
+   input  [9:0] SW,
+	input	 [1:0] KEY,
+	output	 [7:0] HEX0,
+	output	 [7:0] HEX1,
+    output	 [7:0] HEX2,
+    output	 [7:0] HEX3,
+    output	 [7:0] HEX4,
+    output	 [7:0] HEX5,
+    output   [9:0] LEDR
+);
+
+wire [3:0] inputx;
+wire [3:0] inputy;
+wire [3:0] dispx;
+wire [3:0] dispy;
+wire negx;
+wire negy;
+wire led2 = 1'b0;
+wire led1 = 1'b0;
+wire led0 = 1'b0;
+
+assign inputx = SW[7:4];
+assign inputy = SW[3:0];
+
+always @(SW[9:8])
+if (SW[9:8] == 2'b10):
+    begin
+    dispx[3:0] = SW[7:4];
+    dispy[3:0] = SW[3:0];
+    if (inputx == inputy): led2 = 1'b1;
+    else if (inputx >> inputy): led1 = 1'b1;
+    else if (inputx << inputy): led0 = 1'b1;
+    end
+if (SW[9:8] == 2'b11):
+    begin
+    dispx[3:0] = SW[7] ? ~SW[7:4] + 1'b1 : SW[7:4];
+    dispy[3:0] = SW[3] ? ~SW[3:0] + 1'b1 : SW[3:0];
+    negx = SW[7];
+    negy = SW[3];
+    end
+
+
+assign LEDR[2] = led2;
+assign LEDR[1] = led1;
+assign LEDR[0] = led0;
+sevenseg U5 ( .data(dispx), .minus(negx), .blank(~negx), .HEX(HEX5));
+sevenseg U4 ( .data(dispx), .minus(1'b0), .blank(1'b0), .HEX(HEX4));
+sevenseg U1 ( .data(dispy), .minus(negy), .blank(~negy), .HEX(HEX1));
+sevenseg U0 ( .data(dispy), .minus(1'b0), .blank(1'b0), .HEX(HEX0));
+
+endmodule

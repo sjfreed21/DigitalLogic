@@ -1,0 +1,313 @@
+|lab2
+SW[0] => ~NO_FANOUT~
+SW[1] => ~NO_FANOUT~
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => SW[9].IN1
+KEY[0] => KEY[0].IN1
+KEY[1] => KEY[1].IN1
+ADC_CLK_10 => ADC_CLK_10.IN2
+HEX5[0] << sevenseg:U5.HEX[0]
+HEX5[1] << sevenseg:U5.HEX[1]
+HEX5[2] << sevenseg:U5.HEX[2]
+HEX5[3] << sevenseg:U5.HEX[3]
+HEX5[4] << sevenseg:U5.HEX[4]
+HEX5[5] << sevenseg:U5.HEX[5]
+HEX5[6] << sevenseg:U5.HEX[6]
+HEX5[7] << sevenseg:U5.HEX[7]
+HEX4[0] << sevenseg:U4.HEX
+HEX4[1] << sevenseg:U4.HEX
+HEX4[2] << sevenseg:U4.HEX
+HEX4[3] << sevenseg:U4.HEX
+HEX4[4] << sevenseg:U4.HEX
+HEX4[5] << sevenseg:U4.HEX
+HEX4[6] << sevenseg:U4.HEX
+HEX4[7] << sevenseg:U4.HEX
+HEX3[0] << sevenseg:U3.HEX
+HEX3[1] << sevenseg:U3.HEX
+HEX3[2] << sevenseg:U3.HEX
+HEX3[3] << sevenseg:U3.HEX
+HEX3[4] << sevenseg:U3.HEX
+HEX3[5] << sevenseg:U3.HEX
+HEX3[6] << sevenseg:U3.HEX
+HEX3[7] << sevenseg:U3.HEX
+HEX2[0] << sevenseg:U2.HEX
+HEX2[1] << sevenseg:U2.HEX
+HEX2[2] << sevenseg:U2.HEX
+HEX2[3] << sevenseg:U2.HEX
+HEX2[4] << sevenseg:U2.HEX
+HEX2[5] << sevenseg:U2.HEX
+HEX2[6] << sevenseg:U2.HEX
+HEX2[7] << sevenseg:U2.HEX
+HEX1[0] << sevenseg:U1.HEX
+HEX1[1] << sevenseg:U1.HEX
+HEX1[2] << sevenseg:U1.HEX
+HEX1[3] << sevenseg:U1.HEX
+HEX1[4] << sevenseg:U1.HEX
+HEX1[5] << sevenseg:U1.HEX
+HEX1[6] << sevenseg:U1.HEX
+HEX1[7] << sevenseg:U1.HEX
+HEX0[0] << sevenseg:U0.HEX
+HEX0[1] << sevenseg:U0.HEX
+HEX0[2] << sevenseg:U0.HEX
+HEX0[3] << sevenseg:U0.HEX
+HEX0[4] << sevenseg:U0.HEX
+HEX0[5] << sevenseg:U0.HEX
+HEX0[6] << sevenseg:U0.HEX
+HEX0[7] << sevenseg:U0.HEX
+LEDR[0] << toggle.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] << clock1.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] << <GND>
+LEDR[3] << <GND>
+LEDR[4] << <GND>
+LEDR[5] << <GND>
+LEDR[6] << <GND>
+LEDR[7] << <GND>
+LEDR[8] << <GND>
+LEDR[9] << SW[9].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|toggle:T1
+key => val.CLK
+value <= val.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|toggle:T2
+key => val.CLK
+value <= val.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|clkdiv:D1
+clockin => clock.CLK
+clockin => count[0].CLK
+clockin => count[1].CLK
+clockin => count[2].CLK
+clockin => count[3].CLK
+clockin => count[4].CLK
+clockin => count[5].CLK
+clockin => count[6].CLK
+clockin => count[7].CLK
+clockin => count[8].CLK
+clockin => count[9].CLK
+clockin => count[10].CLK
+clockin => count[11].CLK
+clockin => count[12].CLK
+clockin => count[13].CLK
+clockin => count[14].CLK
+clockin => count[15].CLK
+clockin => count[16].CLK
+clockin => count[17].CLK
+clockin => count[18].CLK
+clockin => count[19].CLK
+clockin => count[20].CLK
+clockin => count[21].CLK
+clockin => count[22].CLK
+clockin => count[23].CLK
+clockin => count[24].CLK
+key => LessThan0.IN46
+key => Equal0.IN45
+key => LessThan0.IN47
+key => Equal0.IN46
+key => LessThan0.IN48
+key => Equal0.IN47
+key => LessThan0.IN49
+key => Equal0.IN48
+key => LessThan0.IN50
+key => Equal0.IN49
+clockout <= clock.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|bcd1:B4
+clock => out~reg0.CLK
+clock => mod10[0]~reg0.CLK
+clock => mod10[1]~reg0.CLK
+clock => mod10[2]~reg0.CLK
+clock => mod10[3]~reg0.CLK
+reset_n => out~reg0.ACLR
+reset_n => mod10[0]~reg0.PRESET
+reset_n => mod10[1]~reg0.ACLR
+reset_n => mod10[2]~reg0.ACLR
+reset_n => mod10[3]~reg0.ACLR
+mod10[0] <= mod10[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+mod10[1] <= mod10[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+mod10[2] <= mod10[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+mod10[3] <= mod10[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|bcd2:B5
+clock => mod10[0]~reg0.CLK
+clock => mod10[1]~reg0.CLK
+clock => mod10[2]~reg0.CLK
+clock => mod10[3]~reg0.CLK
+reset_n => mod10[0]~reg0.ACLR
+reset_n => mod10[1]~reg0.ACLR
+reset_n => mod10[2]~reg0.ACLR
+reset_n => mod10[3]~reg0.ACLR
+mod10[0] <= mod10[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+mod10[1] <= mod10[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+mod10[2] <= mod10[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+mod10[3] <= mod10[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|sevenseg:U5
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+blank => Decoder0.IN4
+minus => Decoder0.IN5
+HEX[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+
+|lab2|sevenseg:U4
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+blank => Decoder0.IN4
+minus => Decoder0.IN5
+HEX[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+
+|lab2|translate:R1
+clock => day[0].CLK
+clock => day[1].CLK
+clock => day[2].CLK
+clock => day[3].CLK
+clock => day[4].CLK
+clock => month[0]~reg0.CLK
+clock => month[1]~reg0.CLK
+clock => month[2]~reg0.CLK
+clock => month[3]~reg0.CLK
+clock => value[0].CLK
+clock => value[1].CLK
+clock => value[2].CLK
+clock => value[3].CLK
+clock => value[4].CLK
+clock => value[5].CLK
+clock => value[6].CLK
+reset_n => value[0].PRESET
+reset_n => value[1].ACLR
+reset_n => value[2].ACLR
+reset_n => value[3].ACLR
+reset_n => value[4].ACLR
+reset_n => value[5].ACLR
+reset_n => value[6].ACLR
+ones[0] => value[0].DATAIN
+ones[1] => Add1.IN12
+ones[2] => Add1.IN11
+ones[3] => Add1.IN10
+tens[0] => Add0.IN8
+tens[0] => Add1.IN14
+tens[1] => Add0.IN7
+tens[1] => Add1.IN13
+tens[2] => Add0.IN5
+tens[2] => Add0.IN6
+tens[3] => Add0.IN3
+tens[3] => Add0.IN4
+leap => LessThan1.IN7
+leap => LessThan3.IN7
+leap => Add3.IN0
+leap => Add5.IN7
+month[0] <= month[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+month[1] <= month[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+month[2] <= month[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+month[3] <= month[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+day1[0] <= day[0].DB_MAX_OUTPUT_PORT_TYPE
+day1[1] <= Add7.DB_MAX_OUTPUT_PORT_TYPE
+day1[2] <= Add7.DB_MAX_OUTPUT_PORT_TYPE
+day1[3] <= Add7.DB_MAX_OUTPUT_PORT_TYPE
+day2[0] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+day2[1] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+day2[2] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+day2[3] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|sevenseg:U3
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+blank => Decoder0.IN4
+minus => Decoder0.IN5
+HEX[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+
+|lab2|sevenseg:U2
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+blank => Decoder0.IN4
+minus => Decoder0.IN5
+HEX[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+
+|lab2|sevenseg:U1
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+blank => Decoder0.IN4
+minus => Decoder0.IN5
+HEX[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+
+|lab2|sevenseg:U0
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+blank => Decoder0.IN4
+minus => Decoder0.IN5
+HEX[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+

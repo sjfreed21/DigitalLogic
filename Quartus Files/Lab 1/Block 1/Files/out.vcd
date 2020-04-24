@@ -1,0 +1,164 @@
+$date
+	Mon Oct 07 14:11:58 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module tb $end
+$var wire 10 ! LEDR [9:0] $end
+$var wire 8 " HEX5 [7:0] $end
+$var reg 2 # KEY [1:0] $end
+$var reg 8 $ SW [7:0] $end
+$scope module DUT $end
+$var wire 24 % Bday1 [23:0] $end
+$var wire 24 & Bday2 [23:0] $end
+$var wire 2 ' KEY [1:0] $end
+$var wire 8 ( SW [7:0] $end
+$var wire 10 ) LEDR [9:0] $end
+$var wire 8 * HEX5 [7:0] $end
+$var wire 8 + HEX4 [7:0] $end
+$var wire 8 , HEX3 [7:0] $end
+$var wire 8 - HEX2 [7:0] $end
+$var wire 8 . HEX1 [7:0] $end
+$var wire 8 / HEX0 [7:0] $end
+$var wire 24 0 Bday [23:0] $end
+$scope module U0 $end
+$var wire 1 1 blank $end
+$var wire 4 2 data [3:0] $end
+$var wire 1 3 minus $end
+$var reg 8 4 HEX [7:0] $end
+$upscope $end
+$scope module U1 $end
+$var wire 1 5 blank $end
+$var wire 4 6 data [3:0] $end
+$var wire 1 7 minus $end
+$var reg 8 8 HEX [7:0] $end
+$upscope $end
+$scope module U2 $end
+$var wire 1 9 blank $end
+$var wire 4 : data [3:0] $end
+$var wire 1 ; minus $end
+$var reg 8 < HEX [7:0] $end
+$upscope $end
+$scope module U3 $end
+$var wire 1 = blank $end
+$var wire 4 > data [3:0] $end
+$var wire 1 ? minus $end
+$var reg 8 @ HEX [7:0] $end
+$upscope $end
+$scope module U4 $end
+$var wire 1 A blank $end
+$var wire 4 B data [3:0] $end
+$var wire 1 C minus $end
+$var reg 8 D HEX [7:0] $end
+$upscope $end
+$scope module U5 $end
+$var wire 1 E blank $end
+$var wire 4 F data [3:0] $end
+$var wire 1 G minus $end
+$var reg 8 H HEX [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11111001 H
+0G
+b1 F
+0E
+b10100100 D
+0C
+b10 B
+0A
+b10100100 @
+0?
+b10 >
+0=
+b11111001 <
+0;
+b1 :
+09
+b10010000 8
+07
+b1001 6
+05
+b10010000 4
+03
+b1001 2
+01
+b100100010000110011001 0
+b10010000 /
+b10010000 .
+b11111001 -
+b10100100 ,
+b10100100 +
+b11111001 *
+bzxxxxxxx0 )
+bx0 (
+b11 '
+b1000000011110011001 &
+b100100010000110011001 %
+bx0 $
+b11 #
+b11111001 "
+bzxxxxxxx0 !
+$end
+#200
+bzxxxxxxx1 !
+bzxxxxxxx1 )
+bx1 $
+bx1 (
+#300
+bzxxxxxxx0 !
+bzxxxxxxx0 )
+bx0 $
+bx0 (
+#500
+bzxxxxxxx1 !
+bzxxxxxxx1 )
+b10 #
+b10 '
+#600
+bzxxxxxxx0 !
+bzxxxxxxx0 )
+b11 #
+b11 '
+#800
+b11000000 "
+b11000000 *
+b11000000 H
+b10011001 +
+b10011001 D
+b11000000 ,
+b11000000 @
+b11111000 -
+b11111000 <
+b0 F
+b100 B
+b0 >
+b111 :
+b1000000011110011001 0
+b1 #
+b1 '
+#900
+b11111001 "
+b11111001 *
+b11111001 H
+b10100100 +
+b10100100 D
+b10100100 ,
+b10100100 @
+b11111001 -
+b11111001 <
+b1 F
+b10 B
+b10 >
+b1 :
+b100100010000110011001 0
+b11 #
+b11 '
+#1000

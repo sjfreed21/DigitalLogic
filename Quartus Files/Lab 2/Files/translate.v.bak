@@ -1,0 +1,51 @@
+module translate(
+    input clock,
+    input reset_n
+    input [3:0] ones,
+    input [3:0] tens,
+    output [1:0] month,
+    output [3:0] day1,
+    output [1:0] day2
+);
+
+reg [3:0] value;
+reg [4:0] day;
+
+always @(posedge clock or negedge reset_n)
+begin
+    if (reset_n == 0)
+        value <= 1;
+    else
+        value <= (10*tens) + ones;
+end
+
+always @(posedge clock)
+begin
+    if (value <= 31)
+    begin
+        month <= 1;
+        day <= value;
+    end
+    else if (value > 31 and value <= 59)
+    begin
+        month <= 2;
+        day <= value - 31;
+    end
+    else if (value > 59 and value <= 90)
+    begin
+        month <= 3;
+        day = value - 59;
+    end
+    else
+    begin
+        month <= 4;
+        day = value - 90;
+    end
+end
+
+day2 = day / 10;
+day1 = day - day2;
+
+endmodule
+
+

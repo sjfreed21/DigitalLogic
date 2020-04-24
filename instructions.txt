@@ -1,0 +1,8 @@
+>>To compile:
+cd to correct folder
+"iverilog <files>"
+"vvp a.out > out.txt"
+
+>> To run GTKWave:
+check correct folder
+"gtkwave out.vcd"

@@ -1,0 +1,14 @@
+DEPTH = 256;
+WIDTH = 8;
+
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+CONTENT
+BEGIN
+0   : 2;        % Idle %
+1   : 7;        % Hazards %
+2   : B;        % Left %
+3   : 9;       % Right %
+
+END;
